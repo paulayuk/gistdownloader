@@ -1,0 +1,29 @@
+
+{
+  "manifest_version": 2,
+  "name": "GitHub Gist downloader",
+  "description": "An extension used for downloading github gists",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+  "permissions": [
+    "downloads",
+    "activeTab"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://gist.github.com/*"],
+      "js": ["./js/main.js"],
+      "run_at": "document_end"
+    }
+  ]
+  //"minimum_chrome_version": "46",
+  
+  //"content_security_policy": "script-src 'self' https://gist.githubusercontent.com; object-src 'sha256-WOdSzz11/3cpqOdrm89LBL2UPwEU9EhbDtMy2OciEhs='"
+  //"content_security_policy": "script-src 'self' https://gist.githubusercontent.com; object-src 'self'"
+
+}
