@@ -1,4 +1,4 @@
-
+function init () {
 $(window).on('load', function() {
   
   
@@ -46,4 +46,5 @@ function addEventListenerForRawLinks() {
         links[0].addEventListener('click', prepareDownload);
     }
 }
-
+}
+$(init);
